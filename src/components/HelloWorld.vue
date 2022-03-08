@@ -10,7 +10,7 @@ defineProps<{
     <h3>
       Welcome to
       <a target="_blank" href="https://ezyy.cloud">Ezyy</a> Cloud 
-      Suites Home. Manage your corporate online presence at one go!
+      Suite. Manage your corporate online presence at one go!
     </h3>
   </div>
 </template>
