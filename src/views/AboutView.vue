@@ -1,6 +1,11 @@
 <template>
   <div class="about">
-    <h1>This is the Login Page</h1>
+    <v-card>
+      <iframe src="https://pamushanaafrica.com/" height="80%" width="100%" title="Iframe Example"></iframe>
+    </v-card>
+    <iframe src="https://face.co.zw/" height="60%" width="100%" title="Iframe Example"></iframe>
+    <iframe src="https://mountviewprep.com/" height="60%" width="100%" title="Iframe Example"></iframe>
+    
   </div>
 </template>
 
@@ -8,7 +13,6 @@
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
-    display: flex;
     align-items: center;
   }
 }
