@@ -29,7 +29,7 @@ i {
   place-content: center;
   width: 32px;
   height: 32px;
-
+  background-color: #04FC14;
   color: var(--color-text);
 }
 
@@ -55,6 +55,7 @@ h3 {
     border-radius: 8px;
     width: 50px;
     height: 50px;
+    background-color: #04FC14;
   }
 
   .item:before {

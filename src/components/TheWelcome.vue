@@ -60,3 +60,9 @@ import SupportIcon from './icons/IconSupport.vue'
       marketing team.
   </WelcomeItem>
 </template>
+<!-- 
+<style>
+i {
+  background-color: #04FC14 !important;
+}
+</style> -->
