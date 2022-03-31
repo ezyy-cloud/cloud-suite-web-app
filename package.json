@@ -14,13 +14,13 @@
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
-    "capture-website": "^2.3.0",
     "pinia": "^2.0.11",
     "roboto-fontface": "*",
     "vue": "^3.2.31",
     "vue-router": "^4.0.12",
     "vuetify": "^3.0.0-beta.0",
-    "webfontloader": "^1.0.0"
+    "webfontloader": "^1.0.0",
+    "@grabzit/js": "*"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
