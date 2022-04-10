@@ -31,7 +31,7 @@
 		
 		console.log(card.offsetWidth)
   		items.forEach((item: { url: String; id: String; }): void => {
-			GrabzIt("NTJlZDYzY2QwMjgzNGFiNTg5ZmI5YjI1YWI2ZGY2MjI=").ConvertURL(item.url, { "width": card._rawValue.offsetWidth, "format": "png" }).AddTo(item.id);
+			GrabzIt("NTJlZDYzY2QwMjgzNGFiNTg5ZmI5YjI1YWI2ZGY2MjI=").ConvertURL(item.url, { "width": card._rawValue.offsetWidth, "format": "jpg" }).AddTo(item.id);
 		})
 	})
 
