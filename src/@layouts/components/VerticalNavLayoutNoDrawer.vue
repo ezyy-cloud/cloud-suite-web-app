@@ -1,21 +1,13 @@
 <script lang="ts" setup>
-import { useDisplay } from 'vuetify'
-const { lgAndUp, mdAndDown } = useDisplay()
+import { useDisplay } from "vuetify";
+const { lgAndUp, mdAndDown } = useDisplay();
 
-const drawer = ref(lgAndUp.value)
+const drawer = ref(lgAndUp.value);
 </script>
 
 <template>
-  <VAppBar
-    app
-    flat
-    class="px-6 layout-navbar"
-    style="background: transparent"
-  >
-    <template
-      v-if="mdAndDown"
-      #prepend
-    >
+  <VAppBar app flat class="px-6 layout-navbar" style="background: transparent">
+    <template v-if="mdAndDown" #prepend>
       <VAppBarNavIcon
         class="d-block d-lg-none me-2 ms-n3"
         color="inherit"
@@ -29,10 +21,7 @@ const drawer = ref(lgAndUp.value)
       <slot />
     </div>
   </VMain>
-  <VFooter
-    app
-    style="background: transparent"
-  >
+  <VFooter app style="background: transparent">
     <slot name="footer" />
   </VFooter>
 </template>
