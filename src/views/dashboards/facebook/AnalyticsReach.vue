@@ -74,11 +74,27 @@ const options = computed(() => {
     xaxis: {
       categories: ["Status", "Photo", "Link", "Video"],
       tickPlacement: 'on',
-      labels: { show: true },
+      labels: {
+        show: true,
+        style: {
+          colors: disabledColor,
+          fontSize: "12px",
+        },
+      },
       crosshairs: { opacity: 0 },
       axisTicks: { show: false },
       axisBorder: { show: false },
     },
+    yaxis: {
+
+      labels: {
+        show: true,
+        style: {
+          colors: disabledColor,
+          fontSize: "12px",
+        },
+      },
+    }
   };
 });
 

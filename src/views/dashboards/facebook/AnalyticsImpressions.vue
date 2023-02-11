@@ -25,7 +25,13 @@ const options = computed(() => {
       width: 2,
       colors: [currentTheme.value.primary, currentTheme.value.secondary, currentTheme.value.info],
     },
-    legend: { show: true },
+    legend: {
+      show: true,
+      labels: {
+        colors: [currentTheme.value["on-surface"]],
+        useSeriesColors: false,
+      },
+    },
     grid: {
       borderColor,
       strokeDashArray: 7,
@@ -44,7 +50,13 @@ const options = computed(() => {
     },
     xaxis: {
       tickPlacement: "on",
-      labels: { show: true },
+      labels: {
+        show: true,
+        style: {
+          colors: disabledColor,
+          fontSize: "12px",
+        },
+      },
       crosshairs: { opacity: 0 },
       axisTicks: { show: false },
       axisBorder: { show: false },

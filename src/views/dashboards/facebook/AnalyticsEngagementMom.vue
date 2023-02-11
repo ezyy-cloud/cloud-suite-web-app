@@ -66,6 +66,10 @@ const options = computed(() => {
       tickPlacement: "on",
       labels: {
         show: true,
+        style: {
+          colors: disabledColor,
+          fontSize: "12px",
+        },
       },
       crosshairs: { opacity: 0 },
       axisTicks: { show: false },
@@ -80,6 +84,7 @@ const options = computed(() => {
         offsetX: -17,
         style: {
           fontSize: "12px",
+          colors: disabledColor,
         },
         formatter: (value: number) => `${value.toFixed(0)}%`,
       },

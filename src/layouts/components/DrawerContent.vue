@@ -17,7 +17,7 @@ const upgradeBanner = computed(() => {
   <!-- 👉 Nav header -->
   <div class="nav-header">
     <RouterLink
-      to="/"
+      to="/overview"
       class="app-logo d-flex align-center gap-x-3 app-title-wrapper"
     >
       <!-- ℹ️ You can also use img tag or VImg here -->
@@ -25,7 +25,7 @@ const upgradeBanner = computed(() => {
 
       <Transition name="vertical-nav-app-title">
         <h1 class="font-weight-semibold leading-normal text-xl text-uppercase">
-          Materio
+          Cloud Suites
         </h1>
       </Transition>
     </RouterLink>
@@ -35,21 +35,57 @@ const upgradeBanner = computed(() => {
   <ul>
     <VerticalNavLink
       :item="{
-        title: 'Dashboard',
-        to: 'index',
+        title: 'Overview',
+        to: 'overview',
         icon: { icon: 'mdi-home-outline' }
       }"
     />
-    <VerticalNavLink
+    <!-- <VerticalNavLink
       :item="{
         title: 'Account Settings',
         to: 'account-settings',
         icon: { icon: 'mdi-account-cog-outline' }
       }"
-    />
+    /> -->
     <!-- 👉 Pages -->
-    <VerticalNavSectionTitle :item="{ heading: 'Pages' }" />
+    <VerticalNavSectionTitle :item="{ heading: 'Dashboards' }" />
+
     <VerticalNavLink
+      :item="{
+        title: 'Website',
+        to: 'website',
+        icon: { icon: 'mdi-web' }
+      }"
+    />
+    <VerticalNavLink
+      :item="{
+        title: 'Facebook',
+        to: 'facebook',
+        icon: { icon: 'mdi-facebook' }
+      }"
+    />
+    <VerticalNavLink
+      :item="{
+        title: 'Twitter',
+        to: 'twitter',
+        icon: { icon: 'mdi-twitter' }
+      }"
+    />
+    <VerticalNavLink
+      :item="{
+        title: 'Instagram',
+        to: 'instagram',
+        icon: { icon: 'mdi-instagram' }
+      }"
+    />
+    <VerticalNavLink
+      :item="{
+        title: 'LinkedIn',
+        to: 'linkedin',
+        icon: { icon: 'mdi-linkedin' }
+      }"
+    />
+    <!-- <VerticalNavLink
       :item="{
         title: 'Login',
         to: 'login',
@@ -64,22 +100,22 @@ const upgradeBanner = computed(() => {
         target: '_blank',
         icon: { icon: 'mdi-account-plus-outline' }
       }"
-    />
+    /> -->
 
     <!-- ℹ️ This path doesn't exist so 404 route will catch this undefined path -->
-    <VerticalNavLink
+    <!-- <VerticalNavLink
       :item="{
         title: 'Error',
         to: { path: '/error' },
         target: '_blank',
         icon: { icon: 'mdi-alert-circle-outline' }
       }"
-    />
+    /> -->
 
     <!-- 👉 User Interface -->
-    <VerticalNavSectionTitle :item="{ heading: 'User Interface' }" />
+    <!-- <VerticalNavSectionTitle :item="{ heading: 'User Interface' }" /> -->
 
-    <VerticalNavLink
+    <!-- <VerticalNavLink
       :item="{
         title: 'Typography',
         to: 'typography',
@@ -113,44 +149,29 @@ const upgradeBanner = computed(() => {
         to: 'form-layouts',
         icon: { icon: 'mdi-form-select' }
       }"
-    />
+    /> -->
   </ul>
-
-  <!-- 👉 illustration -->
-  <a
-    href="https://themeselection.com/item/materio-vuetify-vuejs-admin-template"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      :src="upgradeBanner"
-      alt="upgrade-banner"
-      transition="scale-transition"
-      class="upgrade-banner mx-auto"
-      style="max-width: 230px"
-    >
-  </a>
 </template>
 
 <style lang="scss">
-// .v-navigation-drawer {
-//   height: 100%;
+.v-navigation-drawer {
+  height: 100%;
 
-//   .v-navigation-drawer__content {
-//     display: flex;
-//     flex-direction: column;
+  .v-navigation-drawer__content {
+    display: flex;
+    flex-direction: column;
 
-//     > ul {
-//       flex-grow: 1;
-//     }
-//   }
-// }
+    > ul {
+      flex-grow: 1;
+    }
+  }
+}
 
 .upgrade-banner {
   margin-top: auto;
-  // position: absolute;
-  // bottom: 13px;
-  // left: 50%;
-  // transform: translateX(-50%);
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 </style>

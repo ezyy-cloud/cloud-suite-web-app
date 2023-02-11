@@ -1,12 +1,13 @@
 <template>
-  <content />
+  <contacts />
 </template>
 
 <script setup lang="ts">
-import content from "@/views/pages/landing/content.vue";
+import contacts from "@/views/pages/landing/contacts.vue";
 </script>
 
 <style>
+
 </style>
 <route lang="yaml">
 meta:

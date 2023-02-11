@@ -46,6 +46,10 @@ const options = computed(() => {
     },
     legend: {
       show: true,
+      labels: {
+        colors: [currentTheme.value["on-surface"]],
+        useSeriesColors: false,
+      },
     },
     colors: [currentTheme.value.secondary, currentTheme.value.info],
     dataLabels: {
@@ -68,6 +72,13 @@ const options = computed(() => {
         "545-64",
         "65+",
       ],
+      labels: {
+        show: true,
+        style: {
+          colors: disabledColor,
+          fontSize: "12px",
+        },
+      },
     },
     yaxis: {
       show: true,
@@ -78,6 +89,7 @@ const options = computed(() => {
         offsetX: -17,
         style: {
           fontSize: "12px",
+          colors: disabledColor,
         },
         formatter: (value: number) => `${value.toFixed(0)}%`,
       },

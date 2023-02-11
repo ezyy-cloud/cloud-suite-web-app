@@ -56,7 +56,7 @@ const avatarBadgeProps = {
           <VDivider class="my-2" />
 
           <!-- 👉 Profile -->
-          <VListItem link>
+          <!-- <VListItem link>
             <template #prepend>
               <VIcon
                 class="me-2"
@@ -66,10 +66,10 @@ const avatarBadgeProps = {
             </template>
 
             <VListItemTitle>Profile</VListItemTitle>
-          </VListItem>
+          </VListItem> -->
 
           <!-- 👉 Settings -->
-          <VListItem link>
+          <VListItem link to="account-settings">
             <template #prepend>
               <VIcon
                 class="me-2"
@@ -78,11 +78,11 @@ const avatarBadgeProps = {
               />
             </template>
 
-            <VListItemTitle>Settings</VListItemTitle>
+            <VListItemTitle>Account Settings</VListItemTitle>
           </VListItem>
 
           <!-- 👉 Pricing -->
-          <VListItem link>
+          <!-- <VListItem link>
             <template #prepend>
               <VIcon
                 class="me-2"
@@ -92,10 +92,10 @@ const avatarBadgeProps = {
             </template>
 
             <VListItemTitle>Pricing</VListItemTitle>
-          </VListItem>
+          </VListItem> -->
 
           <!-- 👉 FAQ -->
-          <VListItem link>
+          <!-- <VListItem link>
             <template #prepend>
               <VIcon
                 class="me-2"
@@ -105,7 +105,7 @@ const avatarBadgeProps = {
             </template>
 
             <VListItemTitle>FAQ</VListItemTitle>
-          </VListItem>
+          </VListItem> -->
 
           <!-- Divider -->
           <VDivider class="my-2" />
