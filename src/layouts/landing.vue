@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import Footer from "./components/footer.vue";
+import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
 
 import { VerticalNavLayoutNoDrawer } from "@layouts";
-import { useTheme } from "vuetify";
 import ProductBox from "./components/ProductBox.vue";
 </script>
 <template>
