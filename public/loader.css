@@ -17,8 +17,9 @@ body {
   
   .loading-logo {
     position: absolute;
-    inset-block-start: 40%;
-    inset-inline-start: calc(50% - 45px);
+    inset-block-start: 50%;
+    inset-inline-start: calc(50% - 32px);
+    scale: 0.8;
   }
   
   .loading {

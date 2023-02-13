@@ -3,10 +3,10 @@
     <section class="text">
       <h2>
         Accelerating your <br />digital growth with
-        <strong id="brand-name">Cloud Suites</strong>
+        <strong id="brand-name">Cloud Suite</strong>
       </h2>
       <p>
-        Unleash the full potential of your digital presence with Cloud Suites.
+        Unleash the full potential of your digital presence with Cloud Suite.
         We are a digital agency providing expert digital marketing services and
         a proprietary digital asset management tool. Transform your online
         strategy and achieve your business goals with us.

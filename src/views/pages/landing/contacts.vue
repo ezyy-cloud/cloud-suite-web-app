@@ -2,15 +2,15 @@
 export default {
   data: () => ({
     items: [
-      { text: "@cloudsuites", icon: "mdi-facebook" },
-      { text: "@cloudsuites", icon: "mdi-twitter" },
-      { text: "@cloudsuites", icon: "mdi-instagram" },
-      { text: "@cloudsuites", icon: "mdi-linkedin" },
-      { text: "@cloudsuites", icon: "mdi-youtube" },
-      { text: "@cloudsuites", icon: "mdi-pinterest" },
+      { text: "@cloudsuite", icon: "mdi-facebook" },
+      { text: "@cloudsuite", icon: "mdi-twitter" },
+      { text: "@cloudsuite", icon: "mdi-instagram" },
+      { text: "@cloudsuite", icon: "mdi-linkedin" },
+      { text: "@cloudsuite", icon: "mdi-youtube" },
+      { text: "@cloudsuite", icon: "mdi-pinterest" },
       { text: "+263774481007", icon: "mdi-whatsapp" },
-      { text: "csuites.ezyy.cloud", icon: "mdi-web" },
-      { text: "csuites@ezyy.cloud", icon: "mdi-email" },
+      { text: "csuite.ezyy.cloud", icon: "mdi-web" },
+      { text: "csuite@ezyy.cloud", icon: "mdi-email" },
     ],
   }),
 };
