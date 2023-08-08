@@ -14,17 +14,17 @@ const triangleBg = computed(() => {
 
 <template>
   <VCard
-    title="Growth Rate"
-    subtitle="Total growth rate this month"
+    title="Congratulations John! 🎉"
+    subtitle="Best seller of the month"
     class="position-relative"
   >
     <VCardText>
-      <h5 class="text-4xl font-weight-medium text-primary">
-        59%
+      <h5 class="text-2xl font-weight-medium text-primary">
+        $42.8k
       </h5>
-      <p>Highest Growth Rate: Facebook</p>
+      <p>78% of target 🚀</p>
       <VBtn size="small">
-        View
+        View Sales
       </VBtn>
     </VCardText>
 

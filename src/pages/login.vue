@@ -1,11 +1,33 @@
 <script setup lang="ts">
 import AuthProvider from "@/views/pages/authentication/AuthProvider.vue";
+import { ref } from 'vue'
+import { supabase } from '@/plugins/supabase'
 
-const form = ref({
-  email: "",
-  password: "",
-  remember: false,
-});
+const loading = ref(false)
+const errorText = ref(false)
+const errorMessage = ref('')
+const email = ref('')
+const password = ref('')
+const remember = ref(true)
+
+const handleLogin = async () => {
+    try {
+        loading.value = true
+        const { error } = await supabase.auth.signInWithPassword({
+            email: email.value,
+            password: password.value,
+        })
+        if (error) throw error
+    } catch (error) {
+        if (error instanceof Error) {
+            errorMessage.value = error.message
+            errorText.value = true
+        }
+    } finally {
+        loading.value = false
+        errorText.value = false
+    }
+}
 
 const isPasswordVisible = ref(false);
 </script>
@@ -18,17 +40,16 @@ const isPasswordVisible = ref(false);
     </VCardText>
 
     <VCardText>
-      <VForm @submit.prevent="() => {}">
         <VRow>
           <!-- email -->
           <VCol cols="12">
-            <VTextField v-model="form.email" label="Email" type="email" />
+            <VTextField v-model="email" label="Email" type="email" />
           </VCol>
 
           <!-- password -->
           <VCol cols="12">
             <VTextField
-              v-model="form.password"
+              v-model="password"
               label="Password"
               :type="isPasswordVisible ? 'text' : 'password'"
               :append-inner-icon="
@@ -41,7 +62,7 @@ const isPasswordVisible = ref(false);
             <div
               class="d-flex align-center justify-space-between flex-wrap mt-1 mb-4"
             >
-              <VCheckbox v-model="form.remember" label="Remember me" />
+              <VCheckbox v-model="remember" label="Remember me" />
 
               <a class="ms-2 mb-1" href="javascript:void(0)">
                 Forgot Password?
@@ -49,7 +70,7 @@ const isPasswordVisible = ref(false);
             </div>
 
             <!-- login button -->
-            <VBtn block type="submit" to="/overview"> Login </VBtn>
+            <VBtn block @click="handleLogin"> Login </VBtn>
           </VCol>
 
           <!-- create account -->
@@ -71,7 +92,6 @@ const isPasswordVisible = ref(false);
             <AuthProvider />
           </VCol>
         </VRow>
-      </VForm>
     </VCardText>
   </VCard>
 </template>

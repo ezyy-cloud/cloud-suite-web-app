@@ -27,7 +27,7 @@ const options = computed(() => {
       },
     },
     stroke: {
-      width: 1,
+      width: 2,
       colors: [currentTheme.value.surface],
     },
     legend: { show: false },

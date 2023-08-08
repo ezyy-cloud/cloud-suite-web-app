@@ -1,4 +1,4 @@
-<script lang="ts">
+<script  lang="ts">
 import { h } from 'vue'
 
 // @ts-expect-error There won't be declaration file for it

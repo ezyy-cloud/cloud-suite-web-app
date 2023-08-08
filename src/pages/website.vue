@@ -96,3 +96,9 @@ import CardStatisticsVertical from '@core/components/CardStatisticsVertical.vue'
     </VCol>
   </VRow>
 </template>
+
+<route lang="yaml">
+  meta:
+    layout: default
+    requiresAuth: true
+  </route>

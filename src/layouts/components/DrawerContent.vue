@@ -59,97 +59,11 @@ const upgradeBanner = computed(() => {
     />
     <VerticalNavLink
       :item="{
-        title: 'Facebook',
-        to: 'facebook',
-        icon: { icon: 'mdi-facebook' }
+        title: 'BuzzTV',
+        to: 'buzztv',
+        icon: { icon: 'mdi-television' }
       }"
     />
-    <VerticalNavLink
-      :item="{
-        title: 'Twitter',
-        to: 'twitter',
-        icon: { icon: 'mdi-twitter' }
-      }"
-    />
-    <VerticalNavLink
-      :item="{
-        title: 'Instagram',
-        to: 'instagram',
-        icon: { icon: 'mdi-instagram' }
-      }"
-    />
-    <VerticalNavLink
-      :item="{
-        title: 'LinkedIn',
-        to: 'linkedin',
-        icon: { icon: 'mdi-linkedin' }
-      }"
-    />
-    <!-- <VerticalNavLink
-      :item="{
-        title: 'Login',
-        to: 'login',
-        target: '_blank',
-        icon: { icon: 'mdi-login' }
-      }"
-    />
-    <VerticalNavLink
-      :item="{
-        title: 'Register',
-        to: 'register',
-        target: '_blank',
-        icon: { icon: 'mdi-account-plus-outline' }
-      }"
-    /> -->
-
-    <!-- ℹ️ This path doesn't exist so 404 route will catch this undefined path -->
-    <!-- <VerticalNavLink
-      :item="{
-        title: 'Error',
-        to: { path: '/error' },
-        target: '_blank',
-        icon: { icon: 'mdi-alert-circle-outline' }
-      }"
-    /> -->
-
-    <!-- 👉 User Interface -->
-    <!-- <VerticalNavSectionTitle :item="{ heading: 'User Interface' }" /> -->
-
-    <!-- <VerticalNavLink
-      :item="{
-        title: 'Typography',
-        to: 'typography',
-        icon: { icon: 'mdi-alpha-t-box-outline' }
-      }"
-    />
-    <VerticalNavLink
-      :item="{
-        title: 'Icons',
-        to: 'icons',
-        icon: { icon: 'mdi-eye-outline' }
-      }"
-    />
-    <VerticalNavLink
-      :item="{
-        title: 'Cards',
-        to: 'card-basic',
-        icon: { icon: 'mdi-credit-card-outline' }
-      }"
-    />
-    <VerticalNavLink
-      :item="{
-        title: 'Tables',
-        to: 'tables',
-        icon: { icon: 'mdi-table' }
-      }"
-    />
-    <VerticalNavLink
-      :item="{
-        title: 'Form Layouts',
-        to: 'form-layouts',
-        icon: { icon: 'mdi-form-select' }
-      }"
-    /> -->
   </ul>
 </template>
 

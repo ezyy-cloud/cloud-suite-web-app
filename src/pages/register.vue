@@ -1,18 +1,36 @@
 <script setup lang="ts">
 import { useTheme } from 'vuetify'
 import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
+import { supabase } from '@/plugins/supabase'
 
-
-const form = ref({
-  username: '',
-  email: '',
-  password: '',
-  privacyPolicies: false,
-})
-
-const vuetifyTheme = useTheme()
-
+const privacyPolicies = ref(false)
+const loading = ref(false)
+const errorText = ref(false)
+const errorMessage = ref('')
+const email = ref('')
+const password = ref('')
 const isPasswordVisible = ref(false)
+const handleSignUp = async () => {
+    try {
+        loading.value = true
+        const { error } = await supabase.auth.signUp(
+            {
+                email: email.value,
+                password: password.value,
+                options: {}
+            }
+        )
+        if (error) throw error
+    } catch (error) {
+        if (error instanceof Error) {
+            errorMessage.value = error.message
+            errorText.value = true
+        }
+    } finally {
+        loading.value = false
+        errorText.value = false
+    }
+}
 </script>
 
 <template>
@@ -31,19 +49,11 @@ const isPasswordVisible = ref(false)
  </VCardText>
 
       <VCardText>
-        <VForm @submit.prevent="() => {}">
           <VRow>
-            <!-- Username -->
-            <VCol cols="12">
-              <VTextField
-                v-model="form.username"
-                label="Username"
-              />
-            </VCol>
             <!-- email -->
             <VCol cols="12">
               <VTextField
-                v-model="form.email"
+                v-model="email"
                 label="Email"
                 type="email"
               />
@@ -52,7 +62,7 @@ const isPasswordVisible = ref(false)
             <!-- password -->
             <VCol cols="12">
               <VTextField
-                v-model="form.password"
+                v-model="password"
                 label="Password"
                 :type="isPasswordVisible ? 'text' : 'password'"
                 :append-inner-icon="isPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
@@ -61,7 +71,7 @@ const isPasswordVisible = ref(false)
               <div class="d-flex align-center mt-1 mb-4">
                 <VCheckbox
                   id="privacy-policy"
-                  v-model="form.privacyPolicies"
+                  v-model="privacyPolicies"
                   inline
                 />
                 <VLabel
@@ -78,8 +88,7 @@ const isPasswordVisible = ref(false)
 
               <VBtn
                 block
-                type="submit"
-                to="overview"
+                @click="handleSignUp"
               >
                 Sign up
               </VBtn>
@@ -116,7 +125,6 @@ const isPasswordVisible = ref(false)
               <AuthProvider />
             </VCol>
           </VRow>
-        </VForm>
       </VCardText>
     </VCard>
 </template>

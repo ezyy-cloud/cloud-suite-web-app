@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Anchor } from 'vuetify/lib/components'
 import avatar1 from '@/assets/images/avatars/avatar-1.png'
+import { supabase } from '@/plugins/supabase'
 
 const avatarBadgeProps = {
   dot: true,
@@ -9,6 +10,26 @@ const avatarBadgeProps = {
   offsetY: 3,
   color: 'success',
   bordered: true,
+}
+
+const loading = ref(false)
+
+async function signOut() {
+    try {
+
+        loading.value = true
+
+        let { error } = await supabase.auth.signOut()
+
+        if (error) throw error
+
+    } catch (error) {
+        alert(error)
+
+    } finally {
+        loading.value = false
+
+    }
 }
 </script>
 
@@ -111,7 +132,7 @@ const avatarBadgeProps = {
           <VDivider class="my-2" />
 
           <!-- 👉 Logout -->
-          <VListItem to="/login">
+          <VListItem @click="signOut">
             <template #prepend>
               <VIcon
                 class="me-2"
