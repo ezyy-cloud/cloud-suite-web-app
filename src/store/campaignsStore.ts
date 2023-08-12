@@ -43,7 +43,7 @@ const useCampaignsStore = defineStore('campaigns', () => {
             const campaign = computed(() => campaigns.value.find((campaign: any) => campaign.id === id))
 
             setSelectedCategory(campaign.value.category)
-            
+
             return campaign
         }
     }
@@ -51,13 +51,13 @@ const useCampaignsStore = defineStore('campaigns', () => {
     const categories = ref()
 
     const getCategories = async () => {
-        const { data } = await supabase
+        let { data: content_categories, error } = await supabase
             .from('content_categories')
             .select()
 
         categories.value = []
 
-        data?.forEach(category => {
+        content_categories?.forEach(category => {
             const cat = {
                 name: category.name,
                 value: category.value,
@@ -65,6 +65,7 @@ const useCampaignsStore = defineStore('campaigns', () => {
 
             categories.value.push(cat)
         })
+
     }
 
     getCategories()
